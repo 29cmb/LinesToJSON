@@ -55,5 +55,12 @@ if __name__ == "__main__":
     # URL: MUST BE A RAW FILE (such as one from GithubUserContent)
     # FileName must end in .json
 
-    clearConsole() # Comment this out if you don't want to clear the console upon execution
-    fetchRawFile(url=config["downloadURL"], filename=config["fileName"])
+    if config["fileName"] != "" and config["downloadURL"] != "":
+        if(config["fileName"].endswith(".json") and config["downloadURL"].startswith("http")):
+            clearConsole() # Comment this out if you don't want to clear the console upon execution
+            fetchRawFile(url=config["downloadURL"], filename=config["fileName"])
+        else:
+            print("Configuration values are not formatted correctly")
+    else:
+        print("Config values are not set")
+    

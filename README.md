@@ -23,6 +23,6 @@ Then, run `python main.py` to download the file.
 
 All configuration are in config.json and must be changed before executed
 
-`downloadURL` - Must be a raw file (a file which only has data and is seperated into different lines, such as a Github raw file of a txt document)
+`downloadURL` - Recommended to be a raw file (a file which only has data and is separated into different lines, such as a Github raw file of a txt document)
 
 `fileName` - Must end in .json, the file will be uploaded with this name
