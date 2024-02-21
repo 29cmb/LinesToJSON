@@ -2,7 +2,6 @@ import requests
 import json
 from tqdm import tqdm
 import time
-import sys
 import os
 
 def clearConsole():
@@ -50,7 +49,7 @@ def fetchRawFile(url, filename):
         print(f"Failed to download: {e}")
 
 if __name__ == "__main__":
-    config = json.load(open("config.json"))
+    config = json.load(open("config.json", 'r'))
 
     # URL: MUST BE A RAW FILE (such as one from GithubUserContent)
     # FileName must end in .json
